@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Midia/favicon.ico" type="image/x-icon">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="https://github.com/gscruz01" target="_blank" rel="extenal">Gscruz_01</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="https://www.linkedin.com/in/guilherme-cruz-a493a3295/">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/gscruz_01/?next=%2F">Instagram</a></li>
+                <li><a href="https://github.com/gscruz01">Github</a></li>
+                <li><a href="https://wa.me/5511984483408">Contato</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="detail">
+                <h3>Ola, Seja Bem Vindo </h3>
+                <h1>Eu sou <span style="color:#2594fc;">Guilherme</span></h1>
+                <p>Sou um estudante de <span style="color: #50aaff;">Analise e Desenvolvimento de Sistemas</span>,
+                    apaixonado por tecnologia e programação. Atualmente estou no segundo periodo da Faculdade tenho
+                    muito ainda oque aprender, mas estou disposto a aprender e me dedicar ao maximo para me tornar um
+                    otimo profissional.
+                </p>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/guilherme-cruz-a493a3295/" target="_blank" rel="external"><i
+                            class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/gscruz_01/?next=%2F" target="_blank" rel="external"><i
+                            class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/gscruz01" target="_blank" rel="external"><i
+                            class='bx bxl-github'></i></a>
+                    <a href="https://wa.me/5511984483408" target="_blank" rel="external"><i
+                            class='bx bxl-whatsapp'></i></a>
+                </div>
+            </div>
+            <div class="img-sec">
+                <div class="images">
+                    <img src="Midia/Foto de perfil.png" alt="" class="img-w">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
